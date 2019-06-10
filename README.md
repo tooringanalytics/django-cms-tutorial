@@ -181,11 +181,11 @@ In the root of the project, create a ```templates``` directory, and in that, ```
 
 This is worth explaining in a little detail:
 
-```{% load cms_tags sekizai_tags %}``` loads the template tag libraries we use in the template.
-```{% page_attribute "page_title" %}``` extracts the page’s page_title attribute.
-```{% render_block "css" %}``` and ```{% render_block "js" %}``` are Sekizai template tags that load blocks of HTML defined by Django applications. django CMS defines blocks for CSS and JavaScript, and requires these two tags. We recommended placing ```{% render_block "css" %}``` just before the ```</head>``` tag, and and ```{% render_block "js" %}``` tag just before the ```</body>```.
-```{% cms_toolbar %}``` renders the django CMS toolbar.
-```{% placeholder "content" %}``` defines a placeholder, where plugins can be inserted. A template needs at least one ```{% placeholder %}``` template tag to be useful for django CMS. The name of the placeholder is simply a descriptive one, for your reference.
+ - ```{% load cms_tags sekizai_tags %}``` loads the template tag libraries we use in the template.
+ - ```{% page_attribute "page_title" %}``` extracts the page’s page_title attribute.
+ - ```{% render_block "css" %}``` and ```{% render_block "js" %}``` are Sekizai template tags that load blocks of HTML defined by Django applications. django CMS defines blocks for CSS and JavaScript, and requires these two tags. We recommended placing ```{% render_block "css" %}``` just before the ```</head>``` tag, and and ```{% render_block "js" %}``` tag just before the ```</body>```.
+ - ```{% cms_toolbar %}``` renders the django CMS toolbar.
+ - ```{% placeholder "content" %}``` defines a placeholder, where plugins can be inserted. A template needs at least one ```{% placeholder %}``` template tag to be useful for django CMS. The name of the placeholder is simply a descriptive one, for your reference.
 
 ## Database Configuration
 
@@ -209,7 +209,8 @@ $ python manage.py cms check
 Start up the runserver:
 
 ```
-python manage.py runserver
+
+$ python manage.py runserver
 ```
 
 and access the new site, which you should now be able to reach at ```http://localhost:8000```. Login if you haven’t done so already.
