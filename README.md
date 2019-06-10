@@ -2,7 +2,7 @@
 
 ## Preparation
 
-To install and create requirements file for django-cms for Django 2.0.9:
+To install and create requirements file for django-cms for Django 2.0.12:
 
 ```
 $ python3.6 -m venv venv
@@ -10,12 +10,14 @@ $ source venv/bin/activate
 $ pip install --upgrade pip
 $ pip install --upgrade setuptools
 $ pip install -r requirements/local.txt
+$ pip freeze > requirements/pre-django-cms.txt
 $ pip install django-cms
 $ pip install django-filer
 $ pip install djangocms-text-ckeditor
 $ pip install djangocms-link djangocms-file djangocms-picture djangocms-video \
 djangocms-googlemap djangocms-snippet djangocms-style djangocms-column
 $ pip freeze > requirements/django-cms.txt
+$ diff -Naur requirements/{pre-django-cms,django-cms}.txt > requirements/changes.txt
 ```
 
 ## Django Project
