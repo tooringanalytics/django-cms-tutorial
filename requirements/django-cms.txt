@@ -30,7 +30,7 @@ django-redis==4.10.0
 django-sekizai==1.0.0
 django-treebeard==4.3
 djangocms-admin-style==1.4.0
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 docutils==0.14
 factory-boy==2.11.1
 Faker==1.0.7
